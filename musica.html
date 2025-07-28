@@ -1,0 +1,32 @@
+
+<html ng-app="Reproductor">
+    <head>
+        <title> Music </title>
+        <link rel="stylesheet" href="estilos/estilos.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="codigo/app.js"></script>
+
+    </head>
+    <body ng-controller="ControladorReproductor">
+        <div class = "reproductor"> 
+            <h1>Koala's</h1>
+            <div class = "artistas">
+                <h2>Artistas</h2>
+                <div class="listaArtistas">
+                    <u1>
+                        <li ng-repeat="artista in artistas"> 
+                            {{ artista.Nombre }}
+                        </li>
+                    </u1>
+                </div>
+            </div>
+
+
+            <div class = "canciones">
+
+            </div>
+
+
+        </div>
+    </body>
+</html>
