@@ -11,11 +11,19 @@
         <div class = "reproductor"> 
             <h1>Koala's</h1>
             <div class = "artistas">
-                <h2>Artistas</h2>
                 <div class="listaArtistas">
+                    <h2>Artistas</h2>
                     <u1>
-                        <li ng-repeat="artista in artistas"> 
+                        <li ng-repeat="artista in artistas" ng-click="seleccionarArtista(artista)"> 
                             {{ artista.Nombre }}
+                        </li>
+                    </u1>
+                </div>
+                <div class="listaCanciones">
+                    <h2>Canciones de</h2>
+                    <u1>
+                        <li ng-repeat="cancion in canciones" ng-click="seleccionarCancion(cancion)"> 
+                            {{ cancion.Titulo }}
                         </li>
                     </u1>
                 </div>
