@@ -1,0 +1,56 @@
+<html ng-app="Reproductor">
+
+<head>
+    <title> Music </title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="codigo/app.js"></script>
+
+</head>
+
+<body ng-controller="ControladorReproductor">
+    <div class="reproductor">
+ 
+        <h1>Koala's</h1>
+        <div class="artistas">
+            <div class="listaArtistas">
+                <h2>Artistas</h2>
+                <u1>
+                    <li ng-repeat="artista in artistas" ng-click="seleccionarArtista(artista)">
+                        {{ artista.Nombre }}
+                    </li>
+                </u1>
+            </div>
+            <div class="listaCanciones">
+                <h2 ng-if="artistaSeleccionado!=''">Canciones de {{ artistaSeleccionado }}</h2>
+                <u1>
+                    <li ng-repeat="cancion in canciones" ng-click="seleccionarCancion(cancion)">
+                        {{ cancion.Titulo }}
+                    </li>
+                </u1>
+            </div>
+        </div>
+        <div class="reproductor">
+            <h3>Reproduciendo ahora</h3>
+            {{ cancionSeleccionada }}
+
+            <div>
+                <button ng-click="Reproducir()">
+                    <img src="iconos/play.png">
+                </button>
+                <button>
+                    <img src="iconos/pausa.png">
+                </button>
+                <button>
+                    <img src="iconos/stop.png">
+                </button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
