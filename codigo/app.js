@@ -40,6 +40,12 @@ angular.module("Reproductor", [])
     $scope.ubicarTiempoCancion = function (){
         $scope.reproductor.currenTime = $scope.tiempoActual; 
     }
+
+    $interval(function () {
+        if (!$scope.reproductor.paused) {
+            $scope.tiempoActual = $scope.reproductor.currentTime;
+        }
+    }, 500, 0, true);
 });
 
 
